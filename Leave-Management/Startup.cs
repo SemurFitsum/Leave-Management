@@ -39,6 +39,8 @@ namespace Leave_Management
             services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
             services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
 
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
             // Auto Mapper
             services.AddAutoMapper(typeof(Maps));
 
